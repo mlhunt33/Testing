@@ -1,0 +1,68 @@
+# #Rock Paper Scissors Game
+intro = input("Hello! Would you like to play Rock Paper Scissors? (Type ""yes"" or ""no"") ").lower()
+while intro is not "yes" or "no":
+    if intro.lower() == "yes":
+        print("Great! Let's begin")
+        break
+    elif intro.lower() == "no":
+        print("No worries, goodbye!")
+        break
+    else: 
+        print("Please enter a yes or no")
+        intro = input().lower()
+
+import random
+while True:
+    select = (input("Please select: Rock, Paper, or Scissors: ")).lower()
+    possible_choices = ["rock", "paper", "scissors"]
+    computer_action = (random.choice(possible_choices)).lower()
+
+    print("You chose", select, "Computer chose", computer_action)
+
+    if select == computer_action:
+        print("Both players selected", [select], ". It's a tie!")
+    elif select == "rock":
+        if computer_action == "scissors":
+            print("Rock beats Scissors. You win!")
+        else: 
+            print("Paper covers Rock. You lose.")
+    elif select == "paper":
+        if computer_action == "rock":
+            print("Paper covers Rock. You win!")
+        else: 
+            print("Scissors cut Paper. You lose.")
+    elif select == "scissors":
+        if computer_action == "paper":
+            print("Scissors cuts Paper. You win!")
+        else: 
+            print("Rock beats Scissors. You lose.")
+
+    play_again = input("Play again?")
+    if play_again.lower() != "yes":
+        break
+
+
+
+# import random
+
+# options = ["Rock", "Paper", "Scissors"]
+
+# user_choice = input("Please select: Rock, Paper, or Scissors: ")
+# computer_choice = random.choice(options)
+
+# print("You chose", user_choice, "Computer chose", computer_choice)
+
+# if user_choice == computer_choice:
+#     print("It's a tie!")
+# elif user_choice == "Rock" and computer_choice == "Scissors":
+#     print("You win!")
+# elif user_choice == "Paper" and computer_choice == "Rock":
+#     print("You win!")
+# elif user_choice == "Scissors" and computer_choice == "Paper":
+#     print("You win!")
+# else: 
+#     print("Computer wins!")
+    
+#     play_again = input("Play again?")
+#     if play_again.lower() != "yes":
+#         break
